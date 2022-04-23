@@ -1,1 +1,2 @@
 - {DONE} creating SimpleStorage contract
+- {DONE} creating StorageFactory contract
