@@ -1,2 +1,3 @@
 - {DONE} creating SimpleStorage contract
 - {DONE} creating StorageFactory contract
+- {DONE} creating FundMe contract part 1 and learning Payable, msg.sender, msg.value, Ether Units of Measure, Chainlink Oracles and Importing from NPM
