@@ -1,4 +1,5 @@
 - {DONE} creating SimpleStorage contract
 - {DONE} creating StorageFactory contract
 - {DONE} creating FundMe contract part 1 and learning Payable, msg.sender, msg.value, Ether Units of Measure, Chainlink Oracles and Importing from NPM
-- {DONE} creating FundMe contract part 1 and learning using SafeMath for Integer Overflow problem when using solidity < 0.8.0, 'using' keyword (using A for B, A is liberty, B is type), 'Require' and 'Revert' keywords, Transfer function (msg.sender.transfer()), getting full Balance of contract using 'this' keyword  
+- {DONE} creating FundMe contract part 2 and learning using SafeMath for Integer Overflow problem when using solidity < 0.8.0, 'using' keyword (using A for B, A is liberty, B is type), 'Require' and 'Revert' keywords, Transfer function (msg.sender.transfer()), getting full Balance of contract using 'this' keyword  
+- {DONE} creating FundMe contract part 3 and learning creating Contract Owners, Constructor, creating customize Modifiers

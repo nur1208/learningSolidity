@@ -9,11 +9,18 @@ contract FundMe{
     using SafeMathChainlink for uint256;
 
     mapping(address => uint256) public addressToAmountFund;
+    address public owner;
+    address[] public funders;
+    constructor() public{
+        // msg whoever deploy this smartcontract
+        owner = msg.sender;
+    }
 
     function fund() public payable{ 
         uint256 minimumUSD = 50 * 10 ** 18;
         require(getConversionRate(msg.value)  >= minimumUSD, "You need to spend more ETH!");
         addressToAmountFund[msg.sender] += msg.value;
+        funders.push(msg.sender);
     }
 
     function getVersion() public view returns(uint256){
@@ -41,11 +48,29 @@ contract FundMe{
         return ethAmountInUsd;
     }
 
-    function withdraw() public payable{
+    modifier onlyOwner {
+        // first run the code then require
+        // _;
+        require(msg.sender == owner, "you not the owner of this contract");
+        // first run require  then run reset of the code
+        _;
+    } 
+
+
+    function withdraw() onlyOwner public payable {
         // If you are using version eight (v0.8) of chainlink aggregator interface,
         // you will need to change the code below to
         // payable(msg.sender).transfer(address(this).balance);
+
+        // require(msg.sender == owner, "you not the owner of this contract");
         msg.sender.transfer(address(this).balance);
+
+        for(uint256 index=0; index < funders.length; index++ ){
+            address funder = funders[index];
+            addressToAmountFund[funder] = 0;
+        }
+
+        funders = new address[](0);
 
     }
 
