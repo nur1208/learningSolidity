@@ -1,4 +1,3 @@
-from msilib.schema import File
 import json
 from solcx import compile_standard,  install_solc
 
