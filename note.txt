@@ -5,3 +5,4 @@
 - {DONE} creating FundMe contract part 3 and learning creating Contract Owners, Constructor, creating customize Modifiers
 - {DONE} learning how to set up  compile solidity in python
 - {DONE} removing File 
+- {DONE} DEPLOYing SimpleStorage contract using web3.py and learning web3.py and learning how to use ganesh UI and install ganesh cli
