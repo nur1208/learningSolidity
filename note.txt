@@ -7,3 +7,5 @@
 - {DONE} removing File 
 - {DONE} DEPLOYing SimpleStorage contract using web3.py and learning web3.py and learning how to use ganesh UI and install ganesh cli
 - {DONE} connecting python to rinkeby using infura
+- {DONE} learning how to use brownie for deploying smart contract interacting with them and testing them 
+- {DONE} fixing errors , and setting update brownie in windows. not wsl
